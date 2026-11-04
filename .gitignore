@@ -1,0 +1,10 @@
+# local / generated
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+mlruns/
+mlartifacts/
+mlflow.db
+service.log
+.DS_Store
+Thumbs.db
