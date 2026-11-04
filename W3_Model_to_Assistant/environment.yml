@@ -1,0 +1,28 @@
+# Environment for week 3 (transfer test, MLflow, model service, OPC UA monitor)
+# conda env create -f environment.yml
+# conda activate iop-w3
+# python -m ipykernel install --user --name iop-w3 --display-name "Python (iop-w3)"
+# Binder uses the copy in binder/environment.yml of the repository root (keep both files identical).
+name: iop-w3
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  # Jupyter
+  - jupyterlab
+  - ipykernel
+  - jupyter-server-proxy       # opens web interfaces (MLflow UI) through JupyterLab / Binder at /proxy/<port>/
+  # Data, plots, ML
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - requests
+  # Model tracking and service
+  - mlflow
+  - flask
+  # OPC UA (agent block)
+  - nest-asyncio
+  - pip:
+      - "asyncua>=2.1"         # tested 4 Nov 2026 with asyncua 2.1.0: OPC_Server_template and OPC_PubSub_Clients_en run unchanged
