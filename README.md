@@ -1,29 +1,35 @@
 # Internet of Production – AI part: lab material
 
+**🇬🇧 English** · [🇩🇪 Deutsch](README.de.md)
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Triltsch/IoP_AI/HEAD?urlpath=lab)
 
-**EN** Hands-on exercises of the AI part of the lecture *Internet of Production* (Ostfalia University of Applied Sciences). One thread runs through all three weeks: **a 3D-printer farm warns before an extruder blockage**. You find the warning sign in the data, build and validate models, and turn the result into a service and a monitor that others can use.
-**DE** Praktische Übungen zum KI-Teil der Vorlesung *Internet of Production* (Ostfalia Hochschule). Ein roter Faden durch alle drei Wochen: **eine 3D-Druckerfarm warnt vor einer Extruder-Blockade**. Sie finden das Warnzeichen in den Daten, bauen und validieren Modelle und machen das Ergebnis zu einem Service und einem Monitor, den andere nutzen können.
+Hands-on exercises of the AI part of the lecture *Internet of Production* (Ostfalia University of Applied Sciences). One thread runs through all three weeks: **a 3D-printer farm warns before an extruder blockage**. You find the warning sign in the data, build and validate models, and turn the result into a service and a monitor that others can use.
 
-## Start / Start
-- **Without installation / Ohne Installation:** click the Binder badge above (environment: `binder/environment.yml`). The first start can take a few minutes. / Binder-Badge oben anklicken (Umgebung: `binder/environment.yml`); der erste Start kann einige Minuten dauern.
-- **Locally / Lokal:** `conda env create -f binder/environment.yml`, then `conda activate iop-w3` and register the kernel: `python -m ipykernel install --user --name iop-w3 --display-name "Python (iop-w3)"`.
+## Start
 
-## Structure / Aufbau
-One folder per lecture week, one subfolder per language (`en`, `de`). Exercises exist as `_student` (with gaps `___`) and `_solution`. The data live once in `00_Data`. / Ein Ordner je Vorlesungswoche, darin je Sprache ein Unterordner (`en`, `de`). Übungen gibt es als `_student` (mit Lücken `___`) und `_solution`. Die Daten liegen einmalig in `00_Data`.
+- **Without installation:** click the Binder badge above (environment: `binder/environment.yml`). The first start can take a few minutes.
+- **Locally:** `conda env create -f binder/environment.yml`, then `conda activate iop-w3` and register the kernel:
+  `python -m ipykernel install --user --name iop-w3 --display-name "Python (iop-w3)"`
 
-| Folder | Content / Inhalt |
+## Structure
+
+One folder per lecture week, one subfolder per language (`en`, `de`). Exercises exist as `_student` (with gaps `___`) and `_solution`. The data live once in `00_Data`.
+
+| Folder | Content |
 |---|---|
-| `W1_Data_and_Classification` | **Week 1 / Woche 1:** 01 understand the data and find the warning sign; 02 predict the blockage (KNN, metrics); 02b anomaly detection with a z-value rule; 03 which orders fail; 03b diagnosis questions |
-| `W2_LowCode_Trees` | **Week 2 / Woche 2:** 04 decision trees; 05 validation over time; 06 own experiment (three options, protocol template); KNIME workflow (`KNIME/`, for KNIME 5.4.3) with guide |
-| `W3_Model_to_Assistant` | **Week 3 / Woche 3:** 01 transfer test (new printers, new year); 02 experiment tracking with MLflow; 03 model as a service (Flask). The monitor with a traffic light and the OPC UA replay follow (see its README) / Monitor mit Ampel und OPC-UA-Replay folgen (siehe dortige README) |
+| `W1_Data_and_Classification` | **Week 1:** 01 understand the data and find the warning sign; 02 predict the blockage (KNN, metrics); 02b anomaly detection with a z-value rule; 03 which orders fail; 03b diagnosis questions |
+| `W2_LowCode_Trees` | **Week 2:** 04 decision trees; 05 validation over time; 06 own experiment (three options, protocol template); KNIME workflow (`KNIME/`, for KNIME 5.4.3) with guide |
+| `W3_Model_to_Assistant` | **Week 3:** 01 transfer test (new printers, new year); 02 experiment tracking with MLflow; 03 model as a service (Flask). The monitor with a traffic light and the OPC UA replay follow (see its README) |
 | `00_Data/printfarm` | Print farm 2024/25: 3 printers, minute data, error lists, orders and quality control (see its README) |
 | `00_Data/printfarm_2026` | Print farm 2026: 6 printers (3 new), 5 Jan to 19 Sep 2026 (see its README) |
 | `00_Data/knime` | Feature files for the KNIME workshop (E30, E120, slope, label) |
 | `binder/` | Environment for Binder and local use |
 
-## Paths / Pfade
-Notebooks read the data with relative paths, e.g. `Path('../../00_Data/printfarm')`. Open Jupyter in the folder of the notebook (for example `W1_Data_and_Classification/en`) or keep the folder structure. / Die Notebooks lesen die Daten über relative Pfade. Öffnen Sie Jupyter im Ordner des Notebooks oder behalten Sie die Ordnerstruktur bei.
+## Paths
 
-## Recommended order / Empfohlene Reihenfolge
-Week 1 → week 2 → week 3. In week 3 run notebook 02 before 03 (03 loads the models registered in 02). / In Woche 3 zuerst Notebook 02, dann 03 (03 lädt die in 02 registrierten Modelle).
+Notebooks read the data with relative paths, e.g. `Path('../../00_Data/printfarm')`. Open Jupyter in the folder of the notebook (for example `W1_Data_and_Classification/en`) or keep the folder structure.
+
+## Recommended order
+
+Week 1 → week 2 → week 3. In week 3 run notebook 02 before 03 (03 loads the models registered in 02).
