@@ -1,4 +1,7 @@
-# KNIME feature files / KNIME-Merkmalsdateien
+# KNIME feature files
+
+**🇬🇧 English** · [🇩🇪 Deutsch](README.de.md)
+
 `blockage_features_printer1.csv`, `blockage_features_printer2.csv`: one row per 10th printing minute; columns `Timestamp, E30, E120, slope, y, label, split` (comma separated, decimal point). `y` = 0/1, `label` = ok/warn (extruder blockage within 6 h), `split` = train for the first 70 % in time.
+
 Created by `export_for_knime(k)` at the end of `W2_LowCode_Trees/*/04_Decision_Tree_Blockage_*.ipynb` (EN/DE). Printer 2 is meant for the transfer test in week 3 (use all rows as test data). The workflow `W2_LowCode_Trees/KNIME/IoP_W2_Blockage_Tree_*.knwf` (KNIME 5.4.3) contains a copy of the printer 1 file.
-DE: Erzeugt mit `export_for_knime(k)` am Ende von `W2_LowCode_Trees/*/04_Decision_Tree_Blockage_*.ipynb`. `y` = 0/1, `label` = ok/warn (Extruder-Blockade innerhalb von 6 h), `split` = train für die ersten 70 % in der Zeit. Drucker 2 ist für den Übertragungstest in Woche 3 gedacht. Der Workflow `W2_LowCode_Trees/KNIME/IoP_W2_Blockage_Tree_*.knwf` (KNIME 5.4.3) enthält eine Kopie der Datei von Drucker 1.
