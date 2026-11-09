@@ -91,6 +91,11 @@ class Monitor:
             await (await factory.get_child([f'{ns}:Running'])).write_value(True)
         return self
 
+    def now(self):
+        """Latest simulated time seen so far (None before the first minute)."""
+        ts = [s['ts'] for s in self.machines.values() if s['ts'] is not None]
+        return max(ts) if ts else None
+
     async def set_speed(self, minutes_per_minute):
         """Change the replay speed while it runs (1, 60, 600 ...): the speed is a node of the server."""
         await self.speed_node.write_value(ua.DataValue(ua.Variant(float(minutes_per_minute), ua.VariantType.Double)))
