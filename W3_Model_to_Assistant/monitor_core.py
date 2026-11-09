@@ -141,6 +141,8 @@ class Monitor:
                         self._later(s['job'].write_value(False))
                         self.events.append((ts, name, 'light back to %s: RepairNeeded = False' % new))
                     s['light'] = new
+            if len(s['buf']) == WINDOW and s['light'] == 'warm-up':   # window is full (primed), but the machine is not printing: no alarm so far
+                s['light'] = self.light(s['health'])
         self.log.append((ts, name, state, energy, s['z'], s['health'], s['light']))
 
     async def _on_red(self, name, ts):
