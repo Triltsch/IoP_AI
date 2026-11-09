@@ -6,6 +6,7 @@ mlruns/
 mlartifacts/
 mlflow.db
 service.log
+replay.log
 .DS_Store
 Thumbs.db
 

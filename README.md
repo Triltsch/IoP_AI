@@ -20,7 +20,7 @@ One folder per lecture week, one subfolder per language (`en`, `de`). Exercises 
 |---|---|
 | `W1_Data_and_Classification` | **Week 1:** 01 understand the data and find the warning sign; 02 predict the blockage (KNN, metrics); 02b anomaly detection with a z-value rule; 03 which orders fail; 03b diagnosis questions |
 | `W2_LowCode_Trees` | **Week 2:** 04 decision trees; 05 validation over time; 06 own experiment (three options, protocol template); KNIME workflow (`KNIME/`, for KNIME 5.4.3) with guide |
-| `W3_Model_to_Assistant` | **Week 3:** 01 transfer test (new printers, new year); 02 experiment tracking with MLflow; 03 model as a service (Flask). The monitor with a traffic light and the OPC UA replay follow (see its README) |
+| `W3_Model_to_Assistant` | **Week 3:** 01 transfer test (new printers, new year); 02 experiment tracking with MLflow; 03 model as a service (Flask). 04 monitor with a traffic light on an OPC UA replay (see its README) |
 | `00_Data/printfarm` | Print farm 2024/25: 3 printers, minute data, error lists, orders and quality control (see its README) |
 | `00_Data/printfarm_2026` | Print farm 2026: 6 printers (3 new), 5 Jan to 19 Sep 2026 (see its README) |
 | `00_Data/knime` | Feature files for the KNIME workshop (E30, E120, slope, label) |
